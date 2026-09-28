@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Manage users, listings and bookings across RentX.">
+<title>Admin panel — RentX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+<header class="topbar"><div id="nav-mount"></div></header>
+
+<div class="dash-shell">
+  <aside class="dash-side">
+    <div class="side-title">Admin</div>
+    <a href="#overview" class="side-link active" data-section="overview">Overview</a>
+    <a href="#users" class="side-link" data-section="users">Users</a>
+    <a href="#listings" class="side-link" data-section="listings">Listings</a>
+    <a href="#bookings" class="side-link" data-section="bookings">Bookings</a>
+  </aside>
+
+  <main class="dash-main">
+    <div class="dash-header">
+      <div>
+        <h1 id="page-title">Overview</h1>
+        <p id="page-sub">A snapshot of activity across RentX.</p>
+      </div>
+    </div>
+
+    <div class="stat-row" id="stat-row"></div>
+
+    <section id="section-overview">
+      <div class="panel">
+        <div class="panel-head"><h2>Recent booking activity</h2></div>
+        <div style="overflow-x:auto;">
+          <table>
+            <thead><tr><th>Item</th><th>Renter</th><th>Owner</th><th>Dates</th><th>Status</th></tr></thead>
+            <tbody id="overview-bookings-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-users" class="hidden">
+      <div class="panel">
+        <div class="panel-head"><h2>All users</h2></div>
+        <div style="overflow-x:auto;">
+          <table>
+            <thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Area</th><th>Joined</th><th></th></tr></thead>
+            <tbody id="users-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-listings" class="hidden">
+      <div class="panel">
+        <div class="panel-head"><h2>All listings</h2></div>
+        <div style="overflow-x:auto;">
+          <table>
+            <thead><tr><th>Item</th><th>Owner</th><th>Category</th><th>Price/day</th><th>Status</th><th></th></tr></thead>
+            <tbody id="admin-listings-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-bookings" class="hidden">
+      <div class="panel">
+        <div class="panel-head"><h2>All bookings</h2></div>
+        <div style="overflow-x:auto;">
+          <table>
+            <thead><tr><th>Item</th><th>Renter</th><th>Owner</th><th>Dates</th><th>Total</th><th>Status</th></tr></thead>
+            <tbody id="admin-bookings-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/main.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

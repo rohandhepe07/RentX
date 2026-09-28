@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Track your booking requests and rentals on RentX.">
+<title>My rentals — RentX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar"><div id="nav-mount"></div></header>
+
+<div class="dash-shell">
+  <aside class="dash-side">
+    <div class="side-title">Renter</div>
+    <a href="#bookings" class="side-link active" data-section="bookings">My bookings</a>
+    <a href="#profile" class="side-link" data-section="profile">Profile</a>
+    <a href="index.html" class="side-link" style="margin-top:16px;">&larr; Browse listings</a>
+  </aside>
+
+  <main class="dash-main">
+    <div class="dash-header">
+      <div>
+        <h1 id="page-title">My bookings</h1>
+        <p id="page-sub">Requests you've sent to owners, and their current status.</p>
+      </div>
+    </div>
+
+    <div class="stat-row" id="stat-row"></div>
+
+    <section id="section-bookings">
+      <div class="panel">
+        <div class="panel-head"><h2>Booking history</h2></div>
+        <div style="overflow-x:auto;">
+          <table>
+            <thead>
+              <tr><th>Item</th><th>Dates</th><th>Total</th><th>Status</th><th></th></tr>
+            </thead>
+            <tbody id="bookings-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-profile" class="hidden">
+      <div class="panel" style="max-width:480px;">
+        <div class="panel-head"><h2>Your profile</h2></div>
+        <div id="profile-body"></div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/main.js"></script>
+<script src="js/renter.js"></script>
+</body>
+</html>

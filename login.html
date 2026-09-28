@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Log in to RentX as a renter, owner or admin.">
+<title>Log in — RentX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar"><div id="nav-mount"></div></header>
+
+<div class="auth-wrap">
+  <div class="auth-card">
+    <h2 class="mt-0">Log in</h2>
+    <p style="margin-bottom:22px;">Choose your account type, then sign in.</p>
+
+    <div class="role-tabs" id="role-tabs">
+      <button data-role="renter" class="active">Renter</button>
+      <button data-role="owner">Owner</button>
+      <button data-role="admin">Admin</button>
+    </div>
+
+    <div class="form-error" id="login-error"></div>
+
+    <form id="login-form">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" required autocomplete="username">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" required autocomplete="current-password">
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Log in</button>
+    </form>
+
+    <p class="auth-switch" id="switch-line">New here? <a href="signup.html">Create an account</a></p>
+
+    <div class="seed-note">
+      Demo accounts — renter: <code>sana@rentx.app / renter123</code>,
+      owner: <code>priya@rentx.app / owner123</code>,
+      admin: <code>admin@rentx.app / admin123</code>
+    </div>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

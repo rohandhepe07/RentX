@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Create a free RentX account to rent items from neighbours or list your own.">
+<title>Create an account — RentX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar"><div id="nav-mount"></div></header>
+
+<div class="auth-wrap">
+  <div class="auth-card">
+    <h2 class="mt-0">Create an account</h2>
+    <p style="margin-bottom:22px;">Are you listing items, or looking to rent?</p>
+
+    <div class="role-tabs" id="role-tabs">
+      <button data-role="renter" class="active">I'm a renter</button>
+      <button data-role="owner">I'm an owner</button>
+    </div>
+
+    <div class="form-error" id="signup-error"></div>
+
+    <form id="signup-form">
+      <div class="form-group">
+        <label for="name">Full name</label>
+        <input type="text" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" required autocomplete="username">
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" required minlength="6" autocomplete="new-password">
+        </div>
+        <div class="form-group">
+          <label for="area">Area / neighbourhood</label>
+          <input type="text" id="area" placeholder="e.g. Powai" required>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Create account</button>
+    </form>
+
+    <p class="auth-switch">Already have an account? <a href="login.html">Log in</a></p>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

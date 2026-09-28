@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="RentX is a neighbourhood rental marketplace for Mumbai & Thane. Rent tools, cameras, tents and more from people nearby, or list your own items and earn.">
+    <title>RentX — rent from people nearby</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="topbar"><div id="nav-mount"></div></header>
+
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="hero-eyebrow">Mumbai &amp; Thane neighbourhoods</div>
+          <h1>Borrow it from three streets away, not buy it new.</h1>
+          <p class="lede">
+            RentX connects neighbours who own things they rarely use with people who
+            need them for a weekend, a project or a party. List a drill, a
+            camera or a tent and earn a little back — or rent one for a
+            fraction of the price of buying new.
+          </p>
+
+          <div class="search-card">
+            <div class="field">
+              <label for="search-q">What do you need?</label>
+              <input
+                type="text"
+                id="search-q"
+                placeholder="e.g. camera, drill, party tent"
+              />
+            </div>
+            <div class="field">
+              <label for="search-cat">Category</label>
+              <select id="search-cat">
+                <option value="">All categories</option>
+              </select>
+            </div>
+            <button
+              class="btn btn-accent"
+              id="search-btn"
+              style="align-self: end"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-stack" aria-hidden="true">
+          <div class="stack-card">
+            <div id="stack-1"></div>
+            <div class="stack-meta">
+              <strong>Canon EOS M50</strong><span>Powai · ₹450/day</span>
+            </div>
+          </div>
+          <div class="stack-card">
+            <div id="stack-2"></div>
+            <div class="stack-meta">
+              <strong>Folding Party Tent</strong
+              ><span>Andheri West · ₹900/day</span>
+            </div>
+          </div>
+          <div class="stack-card">
+            <div id="stack-3"></div>
+            <div class="stack-meta">
+              <strong>Mountain Bike</strong><span>Andheri West · ₹200/day</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-head">
+        <div>
+          <h2>Available nearby</h2>
+          <p id="results-count"></p>
+        </div>
+      </div>
+
+      <div class="categories" id="category-chips">
+        <button class="chip active" data-cat="">All</button>
+      </div>
+
+      <div class="grid" id="listing-grid"></div>
+    </section>
+
+    <section class="section container" id="how-it-works">
+      <div class="section-head">
+        <div><h2>How RentX works</h2></div>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <h3>Find something nearby</h3>
+          <p>
+            Search by item or category and see what neighbours have listed,
+            with the daily price and pickup area shown upfront.
+          </p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <h3>Request the dates you need</h3>
+          <p>
+            Send a request for your dates. The owner approves or declines,
+            and you can track the status from your dashboard.
+          </p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <h3>Pick up, use, return</h3>
+          <p>
+            Arrange the handover directly with the owner. Once the item is
+            returned, the rental is marked complete for both of you.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-head">
+        <div><h2>Who uses RentX</h2></div>
+      </div>
+      <div class="role-grid">
+        <div class="role-card">
+          <div class="icon">🏷️</div>
+          <h3>Owners</h3>
+          <p>
+            Turn idle items into income. Set your own price, approve
+            requests, and see what's out and what's back in one place.
+          </p>
+          <a href="signup.html?role=owner" class="btn btn-ghost btn-sm"
+            >Start listing</a
+          >
+        </div>
+        <div class="role-card">
+          <div class="icon">🔑</div>
+          <h3>Renters</h3>
+          <p>
+            Skip buying for a one-off job or event. Browse nearby listings
+            and follow all your requests from a single dashboard.
+          </p>
+          <a href="signup.html?role=renter" class="btn btn-ghost btn-sm"
+            >Start renting</a
+          >
+        </div>
+        <div class="role-card">
+          <div class="icon">🛡️</div>
+          <h3>Admin</h3>
+          <p>
+            Keeps the marketplace trustworthy by reviewing listings and
+            managing accounts and bookings across the platform.
+          </p>
+          <a href="login.html?role=admin" class="btn btn-ghost btn-sm"
+            >Admin sign in</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer" id="footer-mount"></footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/icons.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/browse.js"></script>
+  </body>
+</html>

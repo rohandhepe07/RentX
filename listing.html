@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="View item details, pickup area and daily price, then send a booking request to the owner on RentX.">
+<title>Listing — RentX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar"><div id="nav-mount"></div></header>
+
+<section class="section container" id="listing-root">
+  <!-- filled by js/listing.js -->
+</section>
+
+<footer class="site-footer" id="footer-mount"></footer>
+
+<div class="modal-backdrop" id="booking-modal">
+  <div class="modal">
+    <div class="modal-head">
+      <h3 class="mt-0">Request to book</h3>
+      <button class="modal-close" id="modal-close">&times;</button>
+    </div>
+    <div class="form-error" id="booking-error"></div>
+    <form id="booking-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="start-date">Start date</label>
+          <input type="date" id="start-date" required>
+        </div>
+        <div class="form-group">
+          <label for="end-date">End date</label>
+          <input type="date" id="end-date" required>
+        </div>
+      </div>
+      <div class="panel" style="background:var(--paper-dim); padding:16px;">
+        <div class="total-line"><span>Estimated total</span><strong id="modal-total">—</strong></div>
+        <p class="form-hint mt-0">Final total is confirmed once the owner approves your request.</p>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Send request</button>
+    </form>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/main.js"></script>
+<script src="js/listing.js"></script>
+</body>
+</html>
